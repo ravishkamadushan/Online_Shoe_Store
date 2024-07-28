@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="DDApplication.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <table align="center">
+
+                <tr style="width:1200px; color:aqua; height:160px">
+                    <td>
+                        <asp:Image ID="Image1" runat="server" BorderColor="White" BorderWidth="3px" Height="160px" Width="1200px" ImageUrl="~/Images/Admin Pannel.jpg"/>
+                    </td>
+                </tr>
+
+                <tr style="border-width:8px; border-color:#003366; width:1200px; color:#666666; height:60px;" bgcolor="aliceblue">
+                    <td>
+                        <div class="navbar">
+                            <table align="center" cellpading="10">
+
+                                <tr style="border-color:#666666">
+                                    <td>
+                                        <asp:Button ID="btnCategory" runat="server" Text="Add Category" CssClass="button" 
+                                            Height="49px" Width="171px" Font-Bold="True" CausesValidation="False" 
+                                            BorderColor="White" BackColor="#003366" ForeColor="White" OnClick="btnCategory_Click"/>
+                                    </td>
+                                    <td>
+                                        <asp:Button ID="btnAddProduct" runat="server" Text="Add Product" Height="49px" Width="171px" 
+                                            Font-Bold="True" BorderColor="White" BackColor="#003366" ForeColor="White" 
+                                            CausesValidation="False" CssClass="button" OnClick="btnAddProduct_Click" />
+                                    </td>
+                                    <td>
+                                        <asp:Button ID="btnUpdate" runat="server" Text="Update Product" Height="49px" Width="171px" 
+                                            Font-Bold="True" BorderColor="White" BackColor="#003366" ForeColor="White" 
+                                            CausesValidation="False" CssClass="button" OnClick="btnUpdate_Click"/>
+                                    </td>
+                                    <td>
+                                        <asp:Button ID="Button2" runat="server" Text="Order Status" Height="49px" Width="171px"
+                                            Font-Bold="True" BorderColor="White" BackColor="#003366" ForeColor="White" 
+                                            CausesValidation="False" CssClass="button" OnClick="Button2_Click"/>
+                                    </td>
+                                    <td>
+                                        <asp:Button ID="Button3" runat="server" Text="Logout" Height="49px" Width="171px" 
+                                            Font-Bold="True" BorderColor="White" BackColor="#003366" ForeColor="White" 
+                                            CausesValidation="False" CssClass="button" OnClick="Button3_Click"/></td>
+                                </tr>
+
+                            </table>
+
+                        </div>
+                    </td>
+                </tr>   
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+
+            
+        </div>
+    </form>
+</body>
+</html>
